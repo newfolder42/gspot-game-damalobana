@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes in []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="gspot-game-damalobana"
+config/description="Multiplayer hide-and-seek game — WebGL client + Linux Headless server."
+config/tags=PackedStringArray("multiplayer", "websocket", "hide-and-seek")
+run/main_scene="res://client/scenes/Main.tscn"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://assets/icon.svg"
+
+[autoload]
+
+NetworkManager="*res://shared/NetworkManager.gd"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
